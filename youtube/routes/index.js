@@ -18,23 +18,29 @@ router.post('/add', (req, res, next) => {
     });
 });
 
-
 router.get('/getVideo', (req, res, next) => {
     console.log('GET getVideo route');
     var url = req.query.url;
     var name = req.query.name;
     var settings;
     if (url === "")
-        settings = {name: req.query.name};
+        settings = { name: req.query.name };
     else
-        settings = {url: req.query.url};
-        
+        settings = { url: req.query.url };
+
     Video.findOne(settings, (err, video) => {
         if (err)
             return console.error(err);
         else
             console.log(video);
         res.json(video);
+    });
+});
+
+router.get('/list', (req, res, next) => {
+    Video.find((err, videos) => {
+        if (err) return console.log(err);
+        res.json(videos);
     });
 });
 

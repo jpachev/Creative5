@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Comments!</title>
+<title>YouTube Database</title>
 <link rel="stylesheet" href="stylesheets/style.css" type="text/css" />
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="javascripts/script.js"></script>
@@ -14,9 +14,11 @@
 </form>
 
 <button id="add">Add</button>
-<button id="get">Get</button>
-<button id="erase">Clear Database</button>
+<button id="get">Find</button>
+<button id="list">Show All</button>
+<button id="erase">Clear</button>
+<div id="listContainer"></div>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ApGXujZVWf4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe id="video" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </body>
 </html>
