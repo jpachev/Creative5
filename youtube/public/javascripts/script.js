@@ -5,7 +5,7 @@ $(document).ready(() => {
             window.alert('please enter a url and name to add');
             return;
         }
-        
+
         var url = $('#url').val();
         if (!isYoutubeUrl(url)) {
             window.alert('please enter a valid youtube url');
@@ -42,12 +42,13 @@ $(document).ready(() => {
             $('#listContainer').html("");
             if ($.isEmptyObject(data))
                 window.alert('database is empty');
-            else
+            else {
+                $('#listContainer').append('<h1>Videos</h1>');
                 $.each(data, (k, video) => {
-                    $('#listContainer').append('<h1>Videos</h1>');
                     console.log(video.name);
                     $('#listContainer').append(video.name + '<br>');
                 });
+            }
         });
     });
 
@@ -62,7 +63,7 @@ $(document).ready(() => {
 function extractVideoId(url) {
     var regExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
     var match = url.match(regExp);
-    return (match && match[7].length == 11) ? match[7] : false;
+    return match[2];
 }
 
 function isYoutubeUrl(url) {
