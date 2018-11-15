@@ -34,12 +34,14 @@ $(document).ready(() => {
         var video = { name: $('#name').val(), url: $('#url').val() }
         $.getJSON('getVideo', video, (data) => {
             if ($.isEmptyObject(data)) window.alert('video not found');
+            $('#listContainer').html("");
             $("#video").attr("src", "https://www.youtube.com/embed/" + extractVideoId(data.url));
         });
     });
 
     $('#list').click(() => {
         $.getJSON('list', (data) => {
+            $('#video').attr('src', "");
             $('#listContainer').html("");
             if ($.isEmptyObject(data))
                 window.alert('database is empty');
