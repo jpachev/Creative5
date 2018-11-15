@@ -1,3 +1,9 @@
+@font-face {
+    font-family: Ostrich;
+    src: url(./ostrich-sans.sans-medium.ttf);
+}
+
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -11,4 +17,40 @@ button {
   width: 200px;
   height: 50px;
   margin: 20px;
+  font-family: Ostrich; font-size: 24px;
+  font-style: normal; font-variant: normal;
+  font-weight: 500; line-height: 25px; color:black;
+   
+  
+}
+
+form {
+  font-family: Ostrich; font-size: 24px;
+  font-style: normal; font-variant: normal;
+  font-weight: 100; line-height: 25px; color:black;
+}
+
+.top-panel {
+  margin-left: 40%;
+}
+
+.header {
+  text-align: center;
+  font-family: Ostrich; font-size: 50px;
+  font-style: normal; font-variant: normal;
+  font-weight: 100; line-height: 35px; color:black;
+  
+}
+
+.bottom-panel {
+  text-align: center;
+  padding: 50px;
+}
+
+img{
+  margin-top:10px;
+  margin-bottom: 17px;
+  margin-left:5px;
+  width:70px;
+  height:45px;
 }

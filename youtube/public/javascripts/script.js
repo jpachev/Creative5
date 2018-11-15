@@ -21,6 +21,7 @@ $(document).ready(() => {
             }
             else {
                 $.post('add', video);
+                window.alert('Video added to the database!');
             }
         });
     });
